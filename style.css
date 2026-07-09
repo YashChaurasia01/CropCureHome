@@ -501,3 +501,251 @@ form input, form textarea{
     font-weight: 300;
     margin-top: 20px;
 }
+
+/* ============================================================
+   RESPONSIVE MEDIA QUERIES
+   Append this block to the end of your existing style.css
+   Breakpoints: 1024px (tablet), 768px (large mobile / small tablet), 480px (phone)
+   ============================================================ */
+
+/* ---------------------------------------------------------
+   TABLET  (max-width: 1024px)
+--------------------------------------------------------- */
+@media (max-width: 1024px) {
+
+    .header-text {
+        margin-top: 22%;
+        font-size: 26px;
+    }
+
+    .header-text h1 {
+        font-size: 46px;
+    }
+
+    .about-col-1 {
+        flex-basis: 100%;
+        margin-bottom: 20px;
+    }
+
+    .about-col-2 {
+        flex-basis: 100%;
+    }
+
+    .services-list {
+        width: 60%;
+    }
+
+    .update {
+        max-width: 75%;
+    }
+
+    .ap {
+        right: 80px;
+        bottom: 280px;
+        padding: 12px 60px;
+    }
+
+    .contact-left,
+    .contact-right {
+        flex-basis: 48%;
+    }
+}
+
+/* ---------------------------------------------------------
+   LARGE MOBILE / SMALL TABLET  (max-width: 768px)
+--------------------------------------------------------- */
+@media (max-width: 768px) {
+
+    /* Nav wraps to two rows: logo on top, links centered below */
+    nav {
+        flex-direction: column;
+        padding: 12px 5%;
+    }
+
+    nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+        margin: 8px 0 0;
+    }
+
+    nav ul li {
+        margin: 6px 10px;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+
+    .logo {
+        width: 110px;
+    }
+
+    /* Nav is taller now that it wraps, so push content down accordingly */
+    body {
+        padding-top: 110px;
+    }
+
+    .header-text {
+        margin-top: 30%;
+        font-size: 20px;
+    }
+
+    .header-text h1 {
+        font-size: 34px;
+    }
+
+    .btn {
+        left: 50%;
+        bottom: 80px;
+        transform: translateX(-50%);
+        padding: 12px 32px;
+    }
+
+    /* Full-height sections become auto-height with breathing room instead,
+       so content isn't clipped when it doesn't fit in one viewport */
+    #about,
+    #services,
+    #app,
+    #enhance,
+    #contact {
+        height: auto;
+        min-height: 100vh;
+        padding: 60px 5%;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .sub-title {
+        font-size: 38px;
+    }
+
+    .section-title {
+        font-size: 2em;
+    }
+
+    .section-description {
+        font-size: 1em;
+    }
+
+    .subsection-title {
+        font-size: 1.4em;
+    }
+
+    .services-list {
+        width: 100%;
+        align-items: center;
+        margin-top: 30px;
+    }
+
+    .service-item {
+        text-align: center;
+        padding: 25px;
+    }
+
+    .update {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    /* .ap relies on absolute right/bottom offsets tuned for desktop —
+       at this width it's more reliable flowed inline than pinned */
+    .ap {
+        position: static;
+        display: inline-block;
+        margin-top: 20px;
+        padding: 12px 40px;
+    }
+
+    .contact-left,
+    .contact-right {
+        flex-basis: 100%;
+    }
+
+    .social-icons a,
+    .social-icons p {
+        font-size: 24px;
+    }
+
+    form input,
+    form textarea {
+        font-size: 16px;
+        padding: 12px;
+    }
+}
+
+/* ---------------------------------------------------------
+   PHONE  (max-width: 480px)
+--------------------------------------------------------- */
+@media (max-width: 480px) {
+
+    .logo {
+        width: 90px;
+    }
+
+    nav ul li {
+        margin: 4px 8px;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+    }
+
+    body {
+        padding-top: 100px;
+    }
+
+    .header-text {
+        margin-top: 32%;
+        font-size: 16px;
+    }
+
+    .header-text h1 {
+        font-size: 26px;
+    }
+
+    .btn {
+        padding: 10px 24px;
+        font-size: 14px;
+        bottom: 60px;
+    }
+
+    .sub-title {
+        font-size: 28px;
+    }
+
+    .section-title {
+        font-size: 1.5em;
+    }
+
+    .subsection-title {
+        font-size: 1.15em;
+    }
+
+    .service-item {
+        padding: 18px;
+    }
+
+    .service-item h2 {
+        font-size: 22px;
+    }
+
+    .ap {
+        padding: 10px 30px;
+        font-size: 14px;
+    }
+
+    .social-icons a,
+    .social-icons p {
+        font-size: 20px;
+        margin-right: 10px;
+    }
+
+    .copyright {
+        font-size: 13px;
+        padding: 12px 10px;
+    }
+}
